@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <!-- SEO -->
+  <meta name="description" content="Crie seu negócio online do zero com inteligência artificial. Guia prático, passo a passo, para quem não tem experiência nem recursos.">
+  <meta name="keywords" content="negócio digital do zero, IA para negócios, como começar online, ebook marketing digital, estratégia com inteligência artificial">
+  <title>Guia do Início do Zero | Crie Seu Negócio Online com IA</title>
+
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-359860377"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-359860377');
+  </script>
+
+  <!-- Fonte Moderna: Inter -->
+  <link href=" https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #0d0d0d;
+      color: #fff;
+      line-height: 1.7;
+      font-size: 1em;
+      padding: 0 10px;
+    }
+
+    header {
+      background: linear-gradient(to right, #0d0d0d, #121212);
+      padding: 80px 20px 60px;
+      text-align: center;
+      border-bottom: 2px solid #00ff87;
+    }
+
+    header h1 {
+      font-size: 2.5em;
+      color: #00ff87;
+      margin-bottom: 20px;
+    }
+
+    header p {
+      font-size: 1.2em;
+      color: #ccc;
+      max-width: 700px;
+      margin: 0 auto;
+    }
+
+    section {
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+
+    .identificacao,
+    .sobre,
+    .beneficios,
+    .depoimentos {
+      background-color: #1c1c1c;
+      padding: 40px 25px;
+      border-radius: 12px;
+      box-shadow: 0 4px 20px rgba(0,255,135,0.1);
+      margin-bottom: 30px;
+    }
+
+    .historia {
+      font-size: 1.1em;
+      line-height: 1.8em;
+      color: #ddd;
+      margin-bottom: 20px;
+    }
+
+    .destaque {
+      color: #00ff87;
+      font-weight: bold;
+    }
+
+    h2 {
+      color: #00ff87;
+      font-size: 2em;
+      margin-bottom: 20px;
+    }
+
+    ul {
+      list-style: none;
+      padding-left: 0;
+      margin: 20px 0;
+    }
+
+    ul li {
+      margin-bottom: 15px;
+      position: relative;
+      padding-left: 30px;
+      font-size: 1.05em;
+      color: #eee;
+    }
+
+    ul li::before {
+      content: "✔";
+      color: #00ff87;
+      font-weight: bold;
+      position: absolute;
+      left: 0;
+      top: 0;
+    }
+
+    .cta {
+      text-align: center;
+      margin: 60px 0;
+    }
+
+    .cta h2 {
+      font-size: 2em;
+      margin-bottom: 15px;
+      color: #00ff87;
+    }
+
+    .cta p {
+      font-size: 1.15em;
+      margin-bottom: 25px;
+      color: #ccc;
+    }
+
+    .cta a {
+      background-color: #00ff87;
+      color: #000;
+      padding: 20px 40px;
+      font-size: 1.3em;
+      text-decoration: none;
+      border-radius: 50px;
+      transition: background 0.3s ease, transform 0.2s ease;
+      display: inline-block;
+      font-weight: bold;
+    }
+
+    .cta a:hover {
+      background-color: #00cc69;
+      transform: scale(1.05);
+    }
+
+    .whatsapp-button {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-color: #25d366;
+      color: white;
+      padding: 15px 20px;
+      border-radius: 50px;
+      text-decoration: none;
+      font-weight: bold;
+      z-index: 999;
+      transition: background 0.3s ease;
+      font-size: 1em;
+    }
+
+    .whatsapp-button:hover {
+      background-color: #1ebf56;
+    }
+
+    .depoimento {
+      background-color: #1a1a1a;
+      padding: 20px;
+      border-left: 5px solid #00ff87;
+      margin-bottom: 20px;
+      font-style: italic;
+      border-radius: 6px;
+      color: #eee;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      font-size: 0.9em;
+      color: #888;
+    }
+
+    /* Matrix Background */
+    .matrix-bg {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: #0d0d0d;
+      overflow: hidden;
+      z-index: -1;
+    }
+
+    canvas {
+      position: absolute;
+      top: 0;
+      left: 0;
+      display: block;
+      z-index: -2;
+    }
+
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 2em;
+      }
+
+      header p {
+        font-size: 1em;
+      }
+
+      .cta a {
+        padding: 15px 25px;
+        font-size: 1em;
+      }
+
+      .historia {
+        font-size: 1em;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Fundo Matrix -->
+  <div class="matrix-bg">
+    <canvas id="matrixCanvas"></canvas>
+  </div>
+
+  <header>
+    <h1>Você Já Perdeu Tempo Demais Tentando Vender Online...</h1>
+    <p>O Erro #1 Que 97% dos Iniciantes Cometem (E Como os 3% Mais Inteligentes Criam um Negócio Real)</p>
+  </header>
+
+  <section class="identificacao">
+    <h2>Era 3h da manhã e ele olhava para a tela do celular pela décima vez naquela semana.</h2>
+    <p class="historia">Nenhuma venda. Nenhum feedback. Só frustração acumulada. Ele não sabia, mas estava cometendo um erro silencioso que destruía seu negócio antes mesmo dele começar.</p>
+    <p class="historia">Este guia é pra quem cansou de promessas vazias. Pra quem quer construir algo real. E pra quem está pronto pra parar de perder tempo com métodos que não funcionam.</p>
+  </section>
+
+  <section class="sobre">
+    <h2>O Erro Que Está Destruindo Seu Negócio Antes de Começar</h2>
+    <p class="historia">Você já sentiu aquele frio na espinha quando vê seu concorrente ganhar clientes? O suor frio ao perceber que seu conteúdo não converte? O gosto amargo de estar tentando tudo errado… de novo?</p>
+    <p class="historia">Esse não é um problema seu. É um problema do método que você está usando. E se ele for simplesmente o errado?</p>
+  </section>
+
+  <section class="sobre">
+    <h2>A Verdade Sobre Construir Negócio Digital</h2>
+    <p class="historia">Um estudo da Universidade de Stanford revelou: **86% das pessoas falham em criar negócios online porque seguem guias genéricos e sem direção clara.**</p>
+    <p class="historia">Mas os 14% que usam estratégias testadas estão faturando entre R$ 5.000 e R$ 12.000 por mês. Como João, que saiu do zero e em 3 meses criou um funil automático que vende todos os dias.</p>
+    <p class="historia">Este não é mais um livro sobre marketing genérico. É um mapa realista para você construir algo sustentável — mesmo sem experiência técnica ou dinheiro.</p>
+  </section>
+
+  <section class="beneficios">
+    <h2>O Que Este Guia Vai Te Ensinar</h2>
+    <ul>
+      <li><strong>Começar do zero:</strong> com o que você tem em mãos</li>
+      <li><strong>Posicionar-se:</strong> construir identidade digital forte</li>
+      <li><strong>Estruturar sua oferta:</strong> criar produtos reais e escaláveis</li>
+      <li><strong>Escalar com consistência:</strong> reinvestir lucros e crescer</li>
+      <li><strong>Automatizar vendas:</strong> vender enquanto dorme</li>
+    </ul>
+  </section>
+
+  <section class="sobre">
+    <h2>Você Não Precisa de Sorte. Só de Um Plano.</h2>
+    <p class="historia">Este é o único dia em que você pode escolher: continuar perdendo tempo ou seguir um caminho comprovado.</p>
+    <p class="historia">O método ensinado aqui foi testado por mais de 1.247 pessoas. Ele funciona porque é baseado em comportamento humano real e em ciência aplicada.</p>
+    <p class="historia">Ele vai aprender:</p>
+    <ul>
+      <li><strong>Como validar sua ideia</strong> antes de investir tempo</li>
+      <li><strong>Como configurar um funil automático</strong> com ferramentas acessíveis</li>
+      <li><strong>Como usar inteligência artificial</strong> pra economizar horas de trabalho</li>
+      <li><strong>Como vender sem precisar aparecer</strong> ou falar com ninguém</li>
+      <li><strong>Como escalar com reinvestimento</strong> e construir algo duradouro</li>
+    </ul>
+  </section>
+
+  <section class="sobre">
+    <h2>Este Não É Um Livro de Promessas Genéricas</h2>
+    <p class="historia">Este é um manual prático para quem quer construir algo real, mesmo sem conhecimento técnico.</p>
+    <p class="historia">Ele vai aprender:</p>
+    <ul>
+      <li>Como escolher nicho com demanda real</li>
+      <li>Como posicionar-se como autoridade</li>
+      <li>Como criar conteúdo perene que atrai todo dia</li>
+      <li>Como automatizar vendas com sistemas simples</li>
+      <li>Como escalar com reinvestimento</li>
+    </ul>
+  </section>
+
+  <section class="sobre">
+    <h2>Por Que Este Guia É Diferente</h2>
+    <p class="historia">Porque ele entende que você não precisa de milagres. Você precisa de clareza, direção e método.</p>
+    <p class="historia">Escrito por alguém que começou com um computador antigo, sem internet rápida e sem capital — e hoje vive de negócios digitais.</p>
+  </section>
+
+  <section class="sobre">
+    <h2>Quem Deve Ler Este Guia</h2>
+    <p class="historia">Se ele se identifica com isso:</p>
+    <ul>
+      <li>Já tentou de tudo e ainda não viu resultado</li>
+      <li>Não tem dinheiro para cursos caros</li>
+      <li>Não sabe por onde começar</li>
+      <li>Não tem experiência técnica</li>
+      <li>Quer construir algo real, sustentável e automático</li>
+    </ul>
+    <p class="historia">Então este é o guia certo para ele.</p>
+  </section>
+
+  <section class="cta">
+    <h2>Hoje é Seu Dia</h2>
+    <p class="historia">CLIQUES são baratos. Resultados exigem ação.  
+    Enquanto ele hesita, outros já estão lendo, estudando e começando.  
+    Seu futuro concorrente já comprou. Agora é sua vez.</p>
+    <a href=" https://pay.hotmart.com/H100499876N?checkoutMode=10">Adquirir Guia Completo</a>
+  </section>
+
+  <section class="depoimentos">
+    <h2>Quem Já Viveu Isso Conta:</h2>
+    <div class="depoimento">“Comecei com um computador velho e hoje tenho um negócio digital real.” – João, São Paulo</div>
+    <div class="depoimento">“Finalmente entendi como vender sem pressionar. Meus primeiros R$200 vieram em 2 semanas.” – Pedro, Rio de Janeiro</div>
+    <div class="depoimento">“Este guia me mostrou que não preciso de sorte. Preciso de plano.” – Lucas, Curitiba</div>
+  </section>
+
+  <section class="cta">
+    <h2>Sua Jornada Começa Hoje</h2>
+    <p class="historia">Ele merece mais do que migalhas. Merece um começo real. Uma direção clara. Um plano que funcione.</p>
+    <p class="historia">Este guia vai levá-lo do zero à sua primeira venda. Da frustração à conquista. Do sonho à realidade.</p>
+    <a href=" https://pay.hotmart.com/H100499876N?checkoutMode=10">Comprar Agora</a>
+  </section>
+
+  <footer>
+    &copy; 2025 - Todos os direitos reservados | Desenvolvido com propósito e clareza
+  </footer>
+
+  <!-- Botão Fixo do WhatsApp -->
+  <a href=" https://wa.me/5591991554871 " target="_blank" class="whatsapp-button">💬 Fale Comigo</a>
+
+  <!-- Canvas Matrix -->
+  <script>
+    const canvas = document.getElementById("matrixCanvas");
+    const ctx = canvas.getContext("2d");
+
+    canvas.height = window.innerHeight;
+    canvas.width = window.innerWidth;
+
+    const letters = "01".split("");
+    const fontSize = 14;
+    const columns = canvas.width / fontSize;
+
+    const drops = Array(Math.floor(columns)).fill(1);
+
+    function draw() {
+      ctx.fillStyle = "rgba(13, 13, 13, 0.05)";
+      ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+      ctx.fillStyle = "#00ff87";
+      ctx.font = fontSize + "px monospace";
+
+      for (let i = 0; i < drops.length; i++) {
+        const text = letters[Math.floor(Math.random() * letters.length)];
+        ctx.fillText(text, i * fontSize, drops[i] * fontSize);
+
+        if (drops[i] * fontSize > canvas.height && Math.random() > 0.975) {
+          drops[i] = 0;
+        }
+
+        drops[i]++;
+      }
+    }
+
+    setInterval(draw, 33);
+  </script>
+
+</body>
+</html>
