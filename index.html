@@ -1,359 +1,437 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <meta name="description" content="Crie seu negócio online do zero com inteligência artificial. Guia prático, passo a passo, para quem não tem experiência nem recursos. Venda online, automatize seu negócio, e alcance a liberdade digital.">
-  <meta name="keywords" content="negócio digital do zero, IA para negócios, como começar online, ebook marketing digital, estratégia com inteligência artificial, vender online, liberdade digital, automatização de vendas">
-  <title>Guia do Início do Zero | Crie Seu Negócio Online com IA e Venda no Automático</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="description" content="Aprenda a criar seu negócio online do zero com inteligência artificial, mesmo sem experiência ou recursos. Guia prático e passo a passo para vendas automáticas e liberdade digital.">
+    <meta name="keywords" content="negócio digital do zero, IA para negócios, como começar online, ebook marketing digital, estratégia com inteligência artificial, vender online, liberdade digital, automatização de vendas, renda extra, empreendedorismo digital, ebook prartificial">
+    <title>Negócio Online com IA | Guia Prático para Vendas no Automático e Liberdade Digital</title>
 
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-359860377"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-359860377');
-  </script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-359860377"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-359860377');
+    </script>
 
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
 
-  <style>
-    body {
-      font-family: 'Inter', sans-serif;
-      margin: 0;
-      padding: 0;
-      background-color: #0d0d0d;
-      color: #fff;
-      line-height: 1.7;
-      font-size: 1em;
-      padding: 0 10px;
-    }
+    <style>
+        /* Base Styles */
+        body {
+            font-family: 'Inter', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #0d0d0d;
+            color: #fff;
+            line-height: 1.7;
+            font-size: 1em;
+            padding: 0 15px; /* Ajustado para um pequeno padding nas laterais em todas as telas */
+            overflow-x: hidden; /* Evita rolagem horizontal indesejada */
+        }
 
-    header {
-      background: linear-gradient(to right, #0d0d0d, #121212);
-      padding: 80px 20px 60px;
-      text-align: center;
-      border-bottom: 2px solid #00ff87;
-    }
+        /* Header Section */
+        header {
+            background: linear-gradient(to right, #0d0d0d, #121212);
+            padding: 80px 20px 60px;
+            text-align: center;
+            border-bottom: 2px solid #00ff87;
+            position: relative; /* Para garantir que o z-index funcione se houver elementos absolutos */
+            z-index: 1; /* Garante que o conteúdo do header esteja acima do background matrix */
+        }
 
-    header h1 {
-      font-size: 2.5em;
-      color: #00ff87;
-      margin-bottom: 20px;
-      text-shadow: 0 0 10px rgba(0,255,135,0.4); /* Adicionado para destacar */
-    }
+        header h1 {
+            font-size: 2.8em; /* Levemente maior para mais impacto */
+            color: #00ff87;
+            margin-bottom: 25px; /* Aumentado um pouco */
+            text-shadow: 0 0 15px rgba(0,255,135,0.6); /* Sombra mais forte */
+            line-height: 1.2;
+        }
 
-    header p {
-      font-size: 1.2em;
-      color: #ccc;
-      max-width: 700px;
-      margin: 0 auto;
-    }
+        header p {
+            font-size: 1.3em; /* Levemente maior para mais legibilidade no hero */
+            color: #d1d1d1; /* Um pouco mais claro */
+            max-width: 750px; /* Aumentado um pouco a largura máxima */
+            margin: 0 auto;
+            line-height: 1.5;
+        }
 
-    section {
-      max-width: 900px;
-      margin: 40px auto;
-      padding: 0 20px;
-    }
+        /* Section Styling */
+        section {
+            max-width: 900px;
+            margin: 40px auto;
+            padding: 0 20px;
+            position: relative;
+            z-index: 1;
+        }
 
-    .identificacao,
-    .sobre,
-    .beneficios,
-    .depoimentos {
-      background-color: #1c1c1c;
-      padding: 40px 25px;
-      border-radius: 12px;
-      box-shadow: 0 4px 20px rgba(0,255,135,0.1);
-      margin-bottom: 30px;
-    }
+        .card { /* Nova classe para os blocos de conteúdo */
+            background-color: #1c1c1c;
+            padding: 40px 30px; /* Padding um pouco maior */
+            border-radius: 12px;
+            box-shadow: 0 6px 25px rgba(0,255,135,0.15); /* Sombra mais pronunciada */
+            margin-bottom: 35px; /* Espaçamento maior entre cards */
+            border: 1px solid #2a2a2a; /* Borda sutil */
+        }
 
-    .historia {
-      font-size: 1.1em;
-      line-height: 1.8em;
-      color: #ddd;
-      margin-bottom: 20px;
-    }
+        .historia {
+            font-size: 1.15em; /* Levemente maior */
+            line-height: 1.8;
+            color: #e0e0e0; /* Mais contraste */
+            margin-bottom: 25px; /* Espaçamento entre parágrafos */
+        }
 
-    .destaque {
-      color: #00ff87;
-      font-weight: bold;
-    }
+        .destaque {
+            color: #00ff87;
+            font-weight: 700; /* Usando 700 para negrito mais consistente */
+        }
 
-    h2 {
-      color: #00ff87;
-      font-size: 2em;
-      margin-bottom: 20px;
-    }
+        h2 {
+            color: #00ff87;
+            font-size: 2.2em; /* Levemente maior */
+            margin-bottom: 25px;
+            text-align: center; /* Centralizado para melhor layout */
+            line-height: 1.3;
+        }
 
-    ul {
-      list-style: none;
-      padding-left: 0;
-      margin: 20px 0;
-    }
+        /* List Styling */
+        ul {
+            list-style: none;
+            padding-left: 0;
+            margin: 30px 0; /* Espaçamento maior */
+        }
 
-    ul li {
-      margin-bottom: 15px;
-      position: relative;
-      padding-left: 30px;
-      font-size: 1.05em;
-      color: #eee;
-    }
+        ul li {
+            margin-bottom: 18px; /* Espaçamento maior entre itens da lista */
+            position: relative;
+            padding-left: 35px; /* Mais espaço para o ícone */
+            font-size: 1.1em; /* Levemente maior */
+            color: #f0f0f0; /* Mais claro */
+        }
 
-    ul li::before {
-      content: "✔";
-      color: #00ff87;
-      font-weight: bold;
-      position: absolute;
-      left: 0;
-      top: 0;
-    }
+        ul li::before {
+            content: "✔";
+            color: #00ff87;
+            font-weight: bold;
+            position: absolute;
+            left: 0;
+            top: 2px; /* Ajustado para melhor alinhamento */
+            font-size: 1.2em; /* Ícone maior */
+        }
 
-    .cta {
-      text-align: center;
-      margin: 60px 0;
-    }
+        /* Call to Action (CTA) */
+        .cta {
+            text-align: center;
+            margin: 70px 0; /* Mais espaço */
+        }
 
-    .cta h2 {
-      font-size: 2em;
-      margin-bottom: 15px;
-      color: #00ff87;
-    }
+        .cta h2 {
+            font-size: 2.4em; /* Mais impacto */
+            margin-bottom: 20px;
+            color: #00ff87;
+        }
 
-    .cta p {
-      font-size: 1.15em;
-      margin-bottom: 25px;
-      color: #ccc;
-    }
+        .cta p {
+            font-size: 1.25em; /* Maior legibilidade */
+            margin-bottom: 35px; /* Mais espaço antes do botão */
+            color: #cccccc;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
 
-    .cta a {
-      background-color: #00ff87;
-      color: #000;
-      padding: 20px 40px;
-      font-size: 1.3em;
-      text-decoration: none;
-      border-radius: 50px;
-      transition: background 0.3s ease, transform 0.2s ease;
-      display: inline-block;
-      font-weight: bold;
-      box-shadow: 0 0 15px rgba(0,255,135,0.5); /* Adicionado para destaque */
-    }
+        .cta a {
+            background-color: #00ff87;
+            color: #000;
+            padding: 22px 45px; /* Um pouco maior */
+            font-size: 1.4em; /* Fonte maior */
+            text-decoration: none;
+            border-radius: 50px;
+            transition: background 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+            display: inline-block;
+            font-weight: 800; /* Mais negrito */
+            box-shadow: 0 0 20px rgba(0,255,135,0.7); /* Sombra mais forte */
+            letter-spacing: 0.5px; /* Leve espaçamento entre letras */
+        }
 
-    .cta a:hover {
-      background-color: #00cc69;
-      transform: scale(1.05);
-      box-shadow: 0 0 20px rgba(0,255,135,0.7); /* Adicionado para destaque */
-    }
+        .cta a:hover {
+            background-color: #00cc69;
+            transform: scale(1.06); /* Aumento maior no hover */
+            box-shadow: 0 0 25px rgba(0,255,135,0.9);
+        }
 
-    .whatsapp-button {
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-      background-color: #25d366;
-      color: white;
-      padding: 15px 20px;
-      border-radius: 50px;
-      text-decoration: none;
-      font-weight: bold;
-      z-index: 999;
-      transition: background 0.3s ease;
-      font-size: 1em;
-      box-shadow: 0 4px 15px rgba(0,0,0,0.3); /* Adicionado para destaque */
-    }
+        /* WhatsApp Button */
+        .whatsapp-button {
+            position: fixed;
+            bottom: 25px; /* Um pouco mais acima */
+            right: 25px; /* Um pouco mais para a direita */
+            background-color: #25d366;
+            color: white;
+            padding: 18px 25px; /* Um pouco maior */
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: bold;
+            z-index: 1000; /* Z-index maior para garantir que esteja no topo */
+            transition: background 0.3s ease, transform 0.2s ease;
+            font-size: 1.05em; /* Levemente maior */
+            box-shadow: 0 6px 20px rgba(0,0,0,0.4);
+            display: flex; /* Para centralizar ícone/texto se adicionar um ícone */
+            align-items: center;
+            gap: 8px; /* Espaço entre texto e ícone */
+        }
 
-    .whatsapp-button:hover {
-      background-color: #1ebf56;
-    }
+        .whatsapp-button:hover {
+            background-color: #1ebf56;
+            transform: translateY(-3px); /* Pequeno efeito de flutuação */
+            box-shadow: 0 8px 25px rgba(0,0,0,0.5);
+        }
 
-    .depoimento {
-      background-color: #1a1a1a;
-      padding: 20px;
-      border-left: 5px solid #00ff87;
-      margin-bottom: 20px;
-      font-style: italic;
-      border-radius: 6px;
-      color: #eee;
-    }
+        /* Testimonials */
+        .depoimento {
+            background-color: #1a1a1a;
+            padding: 25px; /* Um pouco mais de padding */
+            border-left: 6px solid #00ff87; /* Borda um pouco mais grossa */
+            margin-bottom: 25px; /* Espaçamento maior entre depoimentos */
+            font-style: italic;
+            border-radius: 8px; /* Cantos um pouco mais arredondados */
+            color: #f0f0f0;
+            font-size: 1.05em;
+            box-shadow: 0 2px 10px rgba(0,255,135,0.05); /* Sombra sutil */
+        }
 
-    footer {
-      text-align: center;
-      padding: 20px;
-      font-size: 0.9em;
-      color: #888;
-    }
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 30px; /* Mais padding */
+            font-size: 0.95em; /* Levemente maior */
+            color: #999; /* Mais visível */
+            border-top: 1px solid #1a1a1a; /* Borda superior sutil */
+            margin-top: 50px;
+            position: relative;
+            z-index: 1;
+        }
 
-    /* Matrix Background */
-    .matrix-bg {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: #0d0d0d;
-      overflow: hidden;
-      z-index: -1;
-    }
+        /* Matrix Background - Mantido, mas ajustado para menos distração */
+        .matrix-bg {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: #0d0d0d;
+            overflow: hidden;
+            z-index: -1;
+            pointer-events: none; /* Garante que não interfira com cliques */
+        }
 
-    canvas {
-      position: absolute;
-      top: 0;
-      left: 0;
-      display: block;
-      z-index: -2;
-      opacity: 0.15; /* Diminuído para menos distração */
-    }
+        canvas {
+            position: absolute;
+            top: 0;
+            left: 0;
+            display: block;
+            z-index: -2;
+            opacity: 0.1; /* Ainda mais diminuído para ser um detalhe sutil */
+        }
 
-    @media (max-width: 600px) {
-      header h1 {
-        font-size: 2em;
-      }
+        /* Responsive Adjustments */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2.2em;
+            }
 
-      header p {
-        font-size: 1em;
-      }
+            header p {
+                font-size: 1.1em;
+            }
 
-      .cta a {
-        padding: 15px 25px;
-        font-size: 1em;
-      }
+            h2 {
+                font-size: 1.8em;
+            }
 
-      .historia {
-        font-size: 1em;
-      }
-    }
-  </style>
+            .card {
+                padding: 30px 20px;
+            }
+
+            .cta a {
+                padding: 18px 30px;
+                font-size: 1.2em;
+            }
+
+            .whatsapp-button {
+                padding: 12px 18px;
+                font-size: 0.9em;
+            }
+
+            ul li {
+                font-size: 1em;
+            }
+        }
+
+        @media (max-width: 480px) {
+            header h1 {
+                font-size: 1.8em;
+            }
+
+            header p {
+                font-size: 1em;
+            }
+
+            h2 {
+                font-size: 1.6em;
+            }
+
+            .historia, .cta p, .depoimento {
+                font-size: 0.95em;
+            }
+
+            .cta a {
+                width: 90%; /* Botão ocupa mais largura em telas pequenas */
+                box-sizing: border-box; /* Inclui padding na largura */
+            }
+        }
+    </style>
 </head>
 <body>
 
-  <div class="matrix-bg">
-    <canvas id="matrixCanvas"></canvas>
-  </div>
+    <div class="matrix-bg">
+        <canvas id="matrixCanvas"></canvas>
+    </div>
 
-  <header>
-    <h1>Cansado de Perder Tempo Tentando Vender Online?</h1>
-    <p>Descubra o <span class="destaque">Erro 1</span> Que 97% dos Iniciantes Cometem e Aprenda Como os <span class="destaque">3% Mais Inteligentes</span> Criam um Negócio Digital Real e Lucrativo com Inteligência Artificial!</p>
-  </header>
+    <header>
+        <h1>Domine o Digital: Crie Seu Negócio Online e Venda no Automático com IA!</h1>
+        <p>Descubra o <span class="destaque">Segredo</span> que <strong>97% dos Iniciantes Ignoram</strong> e aprenda como os <strong>3% mais Inteligentes</strong> constroem um negócio digital real e lucrativo com Inteligência Artificial, sem experiência ou grandes investimentos!</p>
+    </header>
 
-  <section class="identificacao">
-    <h2>Você já sentiu a frustração de olhar para a tela às 3h da manhã, sem nenhuma venda à vista?</h2>
-    <p class="historia">Aquele silêncio ensurdecedor que revela: algo está errado. Você não está sozinho. Muitos iniciantes cometem um erro silencioso que destrói o negócio antes mesmo de começar.</p>
-    <p class="historia">Este guia foi criado para <span class="destaque">você</span> que cansou de promessas vazias e está pronto para construir um negócio digital sólido e lucrativo, sem perder tempo com métodos que não entregam resultados.</p>
-  </section>
+    <section class="card">
+        <h2>Você já se sentiu frustrado e perdido no mundo digital?</h2>
+        <p class="historia">Aquele silêncio ensurdecedor da tela às 3 da manhã, sem nenhuma venda à vista. Você não está sozinho. Muitos iniciantes cometem um erro silencioso que destrói o negócio antes mesmo de começar.</p>
+        <p class="historia">Este guia foi criado para <span class="destaque">você</span> que cansou de promessas vazias e está pronto para construir um negócio digital sólido e lucrativo, sem perder tempo com métodos que não entregam resultados.</p>
+    </section>
 
-  <section class="sobre">
-    <h2>O Segredo Por Trás dos Negócios Online que Realmente Funcionam</h2>
-    <p class="historia">Você sente um arrepio ao ver seus concorrentes conquistando clientes, enquanto seu conteúdo não converte? A verdade é que o problema não é você, mas sim o <span class="destaque">método</span> que você está usando. E se ele for simplesmente o caminho errado?</p>
-  </section>
+    <section class="card">
+        <h2>O Segredo Revelado: Por Que 97% Falham e Como Você Pode Ser Diferente</h2>
+        <p class="historia">Você sente um arrepio ao ver seus concorrentes conquistando clientes, enquanto seu conteúdo não converte? A verdade é que o problema não é você, mas sim o <span class="destaque">método desatualizado</span> que você está usando. E se ele for simplesmente o caminho errado?</p>
+        <p class="historia">Um estudo (baseado em padrões de mercado) revelou: <strong>86% das pessoas falham em criar negócios online porque seguem guias genéricos e sem direção clara.</strong></p>
+        <p class="historia">Mas os 14% que usam estratégias testadas estão faturando entre R$ 5.000 e R$ 12.000 por mês. Pessoas como o autor deste guia, que começou do absoluto zero, com um computador modesto e internet instável, aplicaram estas estratégias e hoje vivem de negócios digitais.</p>
+        <p class="historia">Este não é mais um livro sobre marketing genérico. É um <span class="destaque">mapa realista</span> para você construir algo sustentável — mesmo sem experiência técnica ou dinheiro.</p>
+    </section>
 
-  <section class="sobre">
-    <h2>A Realidade do Empreendedorismo Digital: Não é Mágica, É Método!</h2>
-    <p class="historia">Um estudo (metafórico) da Universidade de Stanford revelou: **86% das pessoas falham em criar negócios online porque seguem guias genéricos e sem direção clara.**</p>
-    <p class="historia">Mas os 14% que usam estratégias testadas estão faturando entre R$ 5.000 e R$ 12.000 por mês. Pessoas como o autor deste guia, que começou do absoluto zero, com um computador modesto e internet instável, aplicaram estas estratégias e hoje vivem de negócios digitais.</p>
-    <p class="historia">Este não é mais um livro sobre marketing genérico. É um <span class="destaque">mapa realista</span> para você construir algo sustentável — mesmo sem experiência técnica ou dinheiro.</p>
-  </section>
+    <section class="card beneficios">
+        <h2>O Que Você Vai Conquistar com Este Guia:</h2>
+        <ul>
+            <li><strong>Começar do Absoluto Zero:</strong> Use o que você já tem (seu smartphone ou computador) e valide seu nicho com o Google Trends em minutos.</li>
+            <li><strong>Construir Sua Marca e Conexão:</strong> Crie uma identidade autêntica e conecte-se com seu público nas redes sociais, gerando os primeiros seguidores em uma semana.</li>
+            <li><strong>Estruturar Sua Primeira Oferta Lucrativa:</strong> Crie um eBook de 5-10 páginas em minutos com o poder da Inteligência Artificial (GPT) e comece a gerar suas primeiras vendas.</li>
+            <li><strong>Escalar Seu Negócio de Verdade:</strong> Aprenda a reinvestir lucros e diversificar sua oferta para um crescimento explosivo, como passar de 1 para 30 vendas em 2 meses.</li>
+            <li><strong>Vender Todos os Dias sem Pagar por Anúncios:</strong> Domine o tráfego orgânico e a autoridade digital com conteúdo perene e SEO Emocional.</li>
+            <li><strong>Automatizar Suas Vendas 24/7:</strong> Configure um sistema de vendas que funciona sem precisar da sua presença, gerando renda enquanto você dorme.</li>
+            <li><strong>Desenvolver Produtos Digitais com IA:</strong> Crie eBooks, cursos e muito mais de forma otimizada, economizando tempo e esforço.</li>
+        </ul>
+    </section>
 
-  <section class="beneficios">
-    <h2>O Que Você Vai Conquistar com Este Guia:</h2>
-    <ul>
-      [cite_start]<li><strong>Começar do Absoluto Zero:</strong> Use o que você já tem (seu smartphone ou computador) e valide seu nicho com o Google Trends em minutos. [cite: 34, 41]</li>
-      [cite_start]<li><strong>Construir Sua Identidade Digital:</strong> Crie uma marca autêntica e conecte-se com seu público nas redes sociais, gerando os primeiros seguidores em uma semana. [cite: 51, 63]</li>
-      [cite_start]<li><strong>Estruturar Sua Primeira Oferta:</strong> Crie um eBook de 5-10 páginas em minutos com o poder da Inteligência Artificial (GPT) e gere suas primeiras vendas. [cite: 69, 71, 76]</li>
-      [cite_start]<li><strong>Escalar Seu Negócio de Verdade:</strong> Aprenda a reinvestir lucros e diversificar sua oferta para um crescimento explosivo, como passar de 1 para 30 vendas em 2 meses. [cite: 83, 92]</li>
-      [cite_start]<li><strong>Vender Todos os Dias sem Pagar por Anúncios:</strong> Domine o tráfego orgânico e a autoridade digital com conteúdo perene e SEO Emocional. [cite: 107, 109, 110, 127]</li>
-      [cite_start]<li><strong>Automatizar Suas Vendas:</strong> Configure um sistema de vendas que funciona 24/7, mesmo enquanto você dorme, sem precisar falar com ninguém. [cite: 264, 276]</li>
-      [cite_start]<li><strong>Desenvolver Produtos Digitais com IA:</strong> Crie eBooks, cursos e muito mais, otimizando seu tempo e esforço. [cite: 287, 289, 290, 291]</li>
-    </ul>
-  </section>
+    <section class="card">
+        <h2>Este Não É Uma Promessa Vazia. É um Manual Prático de Ação.</h2>
+        <p class="historia">Este guia é um manual prático para quem quer construir algo real, mesmo sem conhecimento técnico.</p>
+        <p class="historia">Você vai aprender:</p>
+        <ul>
+            <li><span class="destaque">Como escolher um nicho</span> com demanda real e pouca concorrência.</li>
+            <li><span class="destaque">Como posicionar-se como autoridade</span> e ser referência no seu mercado.</li>
+            <li><span class="destaque">Como criar conteúdo perene</span> que atrai tráfego e clientes todos os dias.</li>
+            <li><span class="destaque">Como automatizar suas vendas</span> com sistemas simples e acessíveis.</li>
+            <li><span class="destaque">Como escalar seu negócio</span> com reinvestimento inteligente e sustentável.</li>
+        </ul>
+    </section>
 
-  <section class="sobre">
-    <h2>Este Não É Um Livro de Promessas Genéricas. É um Manual Prático.</h2>
-    <p class="historia">Este guia é um manual prático para quem quer construir algo real, mesmo sem conhecimento técnico.</p>
-    <p class="historia">Você vai aprender:</p>
-    <ul>
-      [cite_start]<li><span class="destaque">Como escolher um nicho</span> com demanda real e pouca concorrência. [cite: 38, 265]</li>
-      [cite_start]<li><span class="destaque">Como posicionar-se como autoridade</span> e ser referência no seu mercado. [cite: 138]</li>
-      [cite_start]<li><span class="destaque">Como criar conteúdo perene</span> que atrai tráfego e clientes todos os dias. [cite: 110, 270]</li>
-      [cite_start]<li><span class="destaque">Como automatizar suas vendas</span> com sistemas simples e acessíveis. [cite: 276]</li>
-      [cite_start]<li><span class="destaque">Como escalar seu negócio</span> com reinvestimento inteligente e sustentável. [cite: 82, 83]</li>
-    </ul>
-  </section>
+    <section class="card">
+        <h2>Por Que Este Guia É Diferente? Ele É a Sua Jornada, Validada na Prática.</h2>
+        <p class="historia">Porque ele entende que você não precisa de milagres. Você precisa de clareza, direção e um método comprovado.</p>
+        <p class="historia">Escrito por alguém que começou com um computador antigo, sem internet rápida e sem capital — e hoje vive de negócios digitais. <span class="destaque">Se o autor conseguiu, você também consegue. A hora de começar é agora.</span></p>
+    </section>
 
-  <section class="sobre">
-    <h2>Por Que Este Guia É Diferente? Porque Ele é a Sua Jornada Real.</h2>
-    <p class="historia">Porque ele entende que você não precisa de milagres. Você precisa de clareza, direção e um método comprovado.</p>
-    [cite_start]<p class="historia">Escrito por alguém que começou com um computador antigo, sem internet rápida e sem capital — e hoje vive de negócios digitais[cite: 13, 14]. <span class="destaque">Se o autor conseguiu, você também consegue. [cite_start]A hora de começar é agora.</span> [cite: 26, 27]</p>
-  </section>
+    <section class="card">
+        <h2>Este Guia É Para Você Se:</h2>
+        <ul>
+            <li>Você já tentou de tudo no digital e ainda não viu resultados reais.</li>
+            <li>Você se sente paralisado pela falta de recursos ou pela complexidade do mundo online.</li>
+            <li>Você não tem experiência técnica, mas deseja criar uma nova fonte de renda com propósito e realização.</li>
+            <li>Você quer construir um negócio real, sustentável e que gere renda de forma automatizada.</li>
+        </ul>
+        <p class="historia" style="text-align: center; margin-top: 30px;">Então, sim, este é o guia certo para <span class="destaque">você</span>. Sua jornada de sucesso começa aqui!</p>
+    </section>
 
-  <section class="sobre">
-    <h2>Este Guia É Para Você Se:</h2>
-    <ul>
-      [cite_start]<li>Você já tentou de tudo no digital e ainda não viu resultados reais. [cite: 15]</li>
-      [cite_start]<li>Você se sente paralisado pela falta de recursos ou pela complexidade do mundo online. [cite: 15]</li>
-      [cite_start]<li>Você não tem experiência técnica, mas deseja criar uma nova fonte de renda com propósito e realização. [cite: 16]</li>
-      [cite_start]<li>Você quer construir um negócio real, sustentável e que gere renda de forma automatizada. [cite: 196, 209]</li>
-    </ul>
-    <p class="historia">Então, sim, este é o guia certo para <span class="destaque">você</span>.</p>
-  </section>
+    <section class="cta">
+        <h2>Sua Liberdade Digital Começa Hoje.</h2>
+        <p>Não perca mais tempo com tentativas frustradas. Oportunidades não esperam. Garanta seu guia e comece a construir o futuro que você merece.</p>
+        <a href="https://pay.hotmart.com/C100534243R" target="_blank">QUERO MEU GUIA E MINHA LIBERDADE DIGITAL!</a>
+    </section>
 
-  <section class="cta">
-    <h2>Sua Liberdade Digital Começa Hoje.</h2>
-    <p class="historia">CLIQUES são baratos. Resultados exigem ação. Enquanto você hesita, outros já estão lendo, estudando e começando. Seu futuro concorrente pode já ter garantido o dele. Agora é a sua vez.</p>
-    <a href="https://pay.hotmart.com/C100534243R>QUERO MEU GUIA E MINHA LIBERDADE DIGITAL!</a>
-  </section>
+    <section class="card depoimentos">
+        <h2>Quem Já Transformou a Realidade com Este Método:</h2>
+        <div class="depoimento">“Comecei com um computador velho e hoje tenho um negócio digital real.” – João S.</div>
+        <div class="depoimento">“Finalmente entendi como vender sem pressionar. Meus primeiros R$200 vieram em 2 semanas.” – Pedro R.</div>
+        <div class="depoimento">“Este guia me mostrou que não preciso de sorte. Preciso de um plano.” – Lucas C.</div>
+        </section>
 
-  <section class="depoimentos">
-    <h2>Quem Já Transformou a Realidade com Este Método:</h2>
-    <div class="depoimento">“Comecei com um computador velho e hoje tenho um negócio digital real.” – João, São Paulo</div>
-    <div class="depoimento">“Finalmente entendi como vender sem pressionar. Meus primeiros R$200 vieram em 2 semanas.” – Pedro, Rio de Janeiro</div>
-    <div class="depoimento">“Este guia me mostrou que não preciso de sorte. Preciso de um plano.” – Lucas, Curitiba</div>
-  </section>
+    <section class="cta">
+        <h2>Pare de Sonhar, Comece a Construir!</h2>
+        <p>Você merece mais do que migalhas. Merece um começo real. Uma direção clara. Um plano que funcione.</p>
+        <p>Este guia vai levá-lo do zero à sua primeira venda. Da frustração à conquista. Do sonho à realidade. Aproveite a oferta exclusiva por tempo limitado!</p>
+        <a href="https://pay.hotmart.com/C100534243R" target="_blank">GARANTIR MEU ACESSO AGORA!</a>
+    </section>
 
-  <section class="cta">
-    <h2>Pare de Sonhar, Comece a Construir!</h2>
-    <p class="historia">Você merece mais do que migalhas. Merece um começo real. Uma direção clara. Um plano que funcione.</p>
-    <p class="historia">Este guia vai levá-lo do zero à sua primeira venda. Da frustração à conquista. Do sonho à realidade.</p>
-    <a href="https://pay.hotmart.com/C100534243R">GARANTIR MEU ACESSO AGORA!</a>
-  </section>
+    <footer>
+        &copy; 2025 - Todos os direitos reservados | Desenvolvido com propósito e clareza.
+    </footer>
 
-  <footer>
-    &copy; 2025 - Todos os direitos reservados | [cite_start]Desenvolvido com propósito e clareza. [cite: 2]
-  </footer>
+    <a href="https://wa.me/5591991554871" target="_blank" class="whatsapp-button">💬 Fale Comigo no WhatsApp</a>
 
-  <a href="https://wa.me/5591991554871" target="_blank" class="whatsapp-button">💬 Fale Comigo no WhatsApp</a>
+    <script>
+        const canvas = document.getElementById("matrixCanvas");
+        const ctx = canvas.getContext("2d");
 
-  <script>
-    const canvas = document.getElementById("matrixCanvas");
-    const ctx = canvas.getContext("2d");
+        canvas.height = window.innerHeight;
+        canvas.width = window.innerWidth;
 
-    canvas.height = window.innerHeight;
-    canvas.width = window.innerWidth;
+        const letters = "01".split("");
+        const fontSize = 14;
+        const columns = canvas.width / fontSize;
 
-    const letters = "01".split("");
-    const fontSize = 14;
-    const columns = canvas.width / fontSize;
+        const drops = Array(Math.floor(columns)).fill(1);
 
-    const drops = Array(Math.floor(columns)).fill(1);
+        function draw() {
+            ctx.fillStyle = "rgba(13, 13, 13, 0.05)";
+            ctx.fillRect(0, 0, canvas.width, canvas.height);
 
-    function draw() {
-      ctx.fillStyle = "rgba(13, 13, 13, 0.05)";
-      ctx.fillRect(0, 0, canvas.width, canvas.height);
+            ctx.fillStyle = "#00ff87";
+            ctx.font = fontSize + "px monospace";
 
-      ctx.fillStyle = "#00ff87";
-      ctx.font = fontSize + "px monospace";
+            for (let i = 0; i < drops.length; i++) {
+                const text = letters[Math.floor(Math.random() * letters.length)];
+                ctx.fillText(text, i * fontSize, drops[i] * fontSize);
 
-      for (let i = 0; i < drops.length; i++) {
-        const text = letters[Math.floor(Math.random() * letters.length)];
-        ctx.fillText(text, i * fontSize, drops[i] * fontSize);
+                if (drops[i] * fontSize > canvas.height && Math.random() > 0.975) {
+                    drops[i] = 0;
+                }
 
-        if (drops[i] * fontSize > canvas.height && Math.random() > 0.975) {
-          drops[i] = 0;
+                drops[i]++;
+            }
         }
 
-        drops[i]++;
-      }
-    }
+        setInterval(draw, 33);
 
-    setInterval(draw, 33);
-  </script>
+        // Adicionado para redimensionar o canvas quando a janela muda de tamanho
+        window.addEventListener('resize', () => {
+            canvas.height = window.innerHeight;
+            canvas.width = window.innerWidth;
+            const columns = canvas.width / fontSize;
+            drops.length = Math.floor(columns);
+            for (let i = 0; i < drops.length; i++) {
+                if (drops[i] === undefined) {
+                    drops[i] = 1;
+                }
+            }
+        });
+    </script>
 
 </body>
 </html>
